@@ -1,4 +1,4 @@
-package popups.controller;
+
 
 import popups.view.PopupViewer;
 
@@ -41,20 +41,5 @@ public class Controller
 		else{if (display.collectUserOption("Are you sure you wish to leave?") == 0){Go=false;}
 		}
 	}
-	/**
-	 * Determines if a String is a double
-	 * @param potentialValue The String To test
-	 * @return if the value is a double or not
-	 */
-private boolean isDouble(String potentialValue){
-	boolean isParseable = false;
-	try{
-		double test = Double.parseDouble(potentialValue);
-		isParseable = true;
-	}
-	catch(NumberFormatException notDouble){
-		display.displayMessage("This is not a double value");
-	}
-	return isParseable;
-}
+
 }
