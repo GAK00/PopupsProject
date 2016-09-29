@@ -57,4 +57,23 @@ private boolean isDouble(String potentialValue){
 	}
 	return isParseable;
 }
+/**
+ * Dererimines if a String is an int
+ * @param potentialValue The String to test
+ * @return if the value is a int or not
+ */
+private boolean isInteger(String potentialValue){
+	boolean isParseable= false;
+	try{
+		int test = Integer.parseInt(potentialValue);
+		isParseable= true;
+		}
+	catch(NumberFormatException notInt){
+		display.displayMessage(notInt.getMessage());
+		display.displayMessage("Type in a integer next time");
+	}
+	return isParseable;
+	
+			
+}
 }
